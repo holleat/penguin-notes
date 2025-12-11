@@ -1,0 +1,36 @@
+name: Deploy Markdown Files to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'posts/*.md'  # 只针对 posts 文件夹内的 Markdown 文件触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: |
+        npm install markdown-it
+
+    - name: Convert Markdown to HTML
+      run: |
+        node build.js
+
+    - name: Deploy to Cloudflare Pages
+      run: |
+        git config --global user.name "Your Name"
+        git config --global user.email "your_email@example.com"
+        git commit -am "Deploy updated markdown files"
+        git push
