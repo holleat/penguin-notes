@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <title>企鵝棧記 · Penguin notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="企鵝棧記 · 分享知識、資訊與思考的個人筆記站" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <button class="topbar__menu-btn" id="menuToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div class="topbar__brand">
+      <span class="topbar__logo-mark">🐧</span>
+      <span class="topbar__brand-text">企鵝棧記</span>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__inner">
+      <div class="sidebar__brand">
+        <img src="assets/img/logo-placeholder.svg" alt="Penguin notes logo" class="sidebar__logo" />
+        <div class="sidebar__title">企鵝棧記</div>
+        <div class="sidebar__subtitle">Penguin notes</div>
+        <p class="sidebar__tagline">安靜整理知識，慢慢長出自己的想法。</p>
+      </div>
+
+      <div class="sidebar__stats">
+        <div class="stat-item">
+          <div class="stat-item__value">34</div>
+          <div class="stat-item__label">文章</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value">4</div>
+          <div class="stat-item__label">分類</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value">95</div>
+          <div class="stat-item__label">標籤</div>
+        </div>
+      </div>
+
+      <nav class="sidebar__nav">
+        <a class="nav-link nav-link--active" href="index.html">
+          <span class="nav-link__icon">🏠</span>
+          <span class="nav-link__text">首頁</span>
+        </a>
+        <a class="nav-link" href="about.html">
+          <span class="nav-link__icon">👤</span>
+          <span class="nav-link__text">關於</span>
+        </a>
+        <a class="nav-link" href="#latest">
+          <span class="nav-link__icon">📝</span>
+          <span class="nav-link__text">最新文章</span>
+        </a>
+        <a class="nav-link" href="#topics">
+          <span class="nav-link__icon">📚</span>
+          <span class="nav-link__text">主題與概念</span>
+        </a>
+      </nav>
+
+      <footer class="sidebar__footer">
+        <small>© <span id="year"></span> 企鵝棧記 · Penguin notes</small>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="layout">
+    <section class="hero">
+      <h1 class="hero__title">企鵝棧記</h1>
+      <p class="hero__subtitle">
+        一個慢慢整理世界的個人筆記站。  
+        這裡會記錄物理定律、概念定義、思想片段，以及那些讓理解變得更清晰的文字。
+      </p>
+      <div class="hero__actions">
+        <a href="#latest" class="btn btn--primary">開始閱讀</a>
+        <a href="about.html" class="btn btn--ghost">關於本站</a>
+      </div>
+    </section>
+
+    <section class="section" id="latest">
+      <div class="section__header">
+        <h2 class="section__title">最新文章</h2>
+        <a class="section__more" href="#">查看全部 &rsaquo;</a>
+      </div>
+
+      <div class="post-list">
+        <article class="post-card">
+          <a href="posts/sample-post.html" class="post-card__link">
+            <div class="post-card__meta">
+              <span class="post-card__date">2024-11-30</span>
+              <span class="post-card__tag">物理 · 概念</span>
+            </div>
+            <h3 class="post-card__title">什麼是能量守恆？</h3>
+            <p class="post-card__excerpt">
+              能量守恆定律看起來像一條「物理公式」，其實更像是一種世界運作的語法。
+              這篇文章試著用生活例子，把這個抽象概念講得直白一點。
+            </p>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="posts/sample-post.html" class="post-card__link">
+            <div class="post-card__meta">
+              <span class="post-card__date">2024-11-20</span>
+              <span class="post-card__tag">哲學 · 思想</span>
+            </div>
+            <h3 class="post-card__title">什麼是「意識形態」？</h3>
+            <p class="post-card__excerpt">
+              我們常說別人「被意識形態綁架」，那意識形態到底是什麼？
+              這篇筆記會從字面、歷史與實際使用三個角度來拆解。
+            </p>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="posts/sample-post.html" class="post-card__link">
+            <div class="post-card__meta">
+              <span class="post-card__date">2024-11-10</span>
+              <span class="post-card__tag">筆記 · 方法</span>
+            </div>
+            <h3 class="post-card__title">如何做「可回頭理解」的閱讀筆記</h3>
+            <p class="post-card__excerpt">
+              筆記不是抄錄句子，而是替未來的自己留下提示。
+              這篇文章整理了我目前在用的一些簡單結構。
+            </p>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="section__header">
+        <h2 class="section__title">主題與概念</h2>
+      </div>
+
+      <div class="topic-grid">
+        <a href="#" class="topic-card">
+          <h3 class="topic-card__title">物理基礎</h3>
+          <p class="topic-card__desc">地心引力、能量守恆、熵、時空觀等入門筆記。</p>
+        </a>
+        <a href="#" class="topic-card">
+          <h3 class="topic-card__title">社會與制度</h3>
+          <p class="topic-card__desc">國家形式的由來、權力結構、制度設計的直覺理解。</p>
+        </a>
+        <a href="#" class="topic-card">
+          <h3 class="topic-card__title">思想與觀念</h3>
+          <p class="topic-card__desc">意識形態、價值觀、世界觀的拆解與重組。</p>
+        </a>
+        <a href="#" class="topic-card">
+          <h3 class="topic-card__title">學習與筆記</h3>
+          <p class="topic-card__desc">如何整理資訊、建立自己的知識棧、寫下可複用的筆記。</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
